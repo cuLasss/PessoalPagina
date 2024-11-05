@@ -1,1 +1,70 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site do Lucas</title>
+</head>
+<body>
+    <header>
+        <h1 class="cabeçalho"><i>Lucas Martin</i></h1>
+        <img class="imagem" src="https://i.imgur.com/BGTHrcB.png" alt="homem de touca">
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre">
+        <div class="container"> <!-- Contêiner flex -->
+            <div class="biografia">
+                <h1><i>BIOGRAFIA</i></h1>
+                <div class="biotext">
+                    <h2>Sou um garoto de programa que cobra 150 a hora. <br>É bem barato e eficiente, faço várias coisas como <br>
+                    contar de 1 a 10 e multiplicar 2 por 2</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="hobbies" class="hobbies">    
+        <h1 style="font-family: helvetica, sans-serif;"><i>HOBBIES</i></h1>
+        <ul class="lista"> 
+            <li>Gosto de Relaxar</li>
+            <li>Gosto de dormir</li>
+            <li>Gosto de jogar jogos eletrônicos</li>
+        </ul>
+    </div>
+    
+    <div id="contato" class="contato">
+        <h1>Seção de Contato</h1>
+        <form action="mailto:lucas141martin@hotmail.com" method="POST" enctype="text/plain">
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <footer>
+        <div class="rodape">
+            <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ" target="_blank"> Meu site favorito  </a>
+            <h5> lucas141martin@hotmail.com </h5>      
+        </div>
+    </footer>
+
+</body>
+</html>
