@@ -1,111 +1,125 @@
-/* Aplicando Grid na Seção de Biografia */
 .container {
-    display: grid; /* Mudança para grid */
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    gap: 20px; /* Espaço entre as colunas */
-    margin: 20px auto; /* Centraliza o conteúdo */
+    display: flex; /* Ativa o flexbox */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    margin: 5px; /* Margem ao redor do contêiner */
 }
 
-/* Ajustando a biografia dentro do grid */
 .biografia {
+    flex: 1; /* Permite que a biografia ocupe o espaço restante */
+    margin-right: 20px; /* Margem à direita para espaçamento */
+}
+
+.hobbies {
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco transparente */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Borda branca semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    width: 300px; /* Ajuste a largura conforme necessário */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 50px; /* Aumente esse valor para mover mais para baixo */
+}
+
+.imagem {
+    width: 110px;
+    height: auto;
+    border-radius: 10%;
+    border: 5px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 10px auto;
+    display: block;
+}
+
+.cabeçalho {
     text-align: center;
     font-family: helvetica, sans-serif;
+    font-size: 50px;
+    margin: 30px auto;
+}
+
+.biografia {
+    text-align: left;
+    font-family: helvetica, sans-serif;
     font-size: 20px;
-    margin: 20px 0;
-    padding: 50px;
-    grid-column: span 2; /* Faz a biografia ocupar as duas colunas */
+    margin: 20px 0; /* Margem acima e abaixo */
+    padding: 0; /* Remove o preenchimento */
 }
 
-/* Ajustando a lista de hobbies com grid */
-.hobbies {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 25px solid rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 20px;
-    width: 700px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide os hobbies em duas colunas */
-    gap: 20px;
-    text-align: center;
-}
-
-.hobbies .lista {
+.biotext {
+    text-align: left;
     font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin: 10px;
+}
+
+.lista {
+    font-family: arial, sans-serif;
     font-size: 25px;
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o preenchimento da lista */
 }
 
-.hobbies .lista li {
-    margin-right: 10px;
+.lista li {
+    margin-right: 10px; /* Espaçamento entre os itens da lista */
 }
 
-.hobbies .lista li::before {
-    content: "• "; 
-    color: black; 
-    font-weight: bold;
+.lista li::before {
+    content: "• "; /* Adiciona um marcador manualmente */
+    color: black; /* Cor do marcador */
+    font-weight: bold; /* Deixa o marcador em negrito, se desejado */
 }
 
-/* Grid no Contato */
 .contato {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 150px auto;
-    width: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: grid; /* Ativa o grid no formulário */
-    gap: 15px; /* Espaçamento entre os campos */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Borda branca semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 50px auto; /* Espaçamento acima e abaixo */
+    width: 400px; /* Largura da seção */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar a seção */
 }
 
-.contato label,
+.contato h1 {
+    font-family: helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contato label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: block; /* Exibe o label como bloco para alinhar melhor os campos */
+    margin-bottom: 5px;
+}
+
 .contato input[type="text"],
 .contato input[type="email"],
 .contato textarea {
-    grid-column: span 2; /* Faz com que todos esses campos ocupem a largura completa */
+    width: 90%; /* Faz com que os inputs ocupem toda a largura disponível */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+    font-size: 14px;
 }
 
 .contato input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Cor do botão */
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    grid-column: span 2; /* Faz o botão de envio ocupar toda a largura */
 }
 
-/* Manter a responsividade */
-@media (max-width: 768px) {
-    .hobbies {
-        width: 90%; /* Aumenta a largura da seção de hobbies */
-    }
-
-    .container {
-        grid-template-columns: 1fr; /* Para telas pequenas, colocar as seções uma abaixo da outra */
-    }
+.contato input[type="submit"]:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
 }
 
-@media (max-width: 480px) {
-    .imagem {
-        width: 80px;
-    }
-
-    .cabeçalho {
-        font-size: 32px;
-    }
-
-    .biografia, .contato {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .contato input[type="submit"] {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+body {
+    background-image: url('https://i.pinimg.com/originals/36/71/a7/3671a71c8ac7caf97d84b32ff9745d99.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
