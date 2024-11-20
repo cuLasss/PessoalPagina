@@ -1,196 +1,111 @@
+/* Aplicando Grid na Seção de Biografia */
 .container {
-    display: flex; /* Ativa o flexbox */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    margin: 5px; /* Margem ao redor do contêiner */
+    display: grid; /* Mudança para grid */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 20px; /* Espaço entre as colunas */
+    margin: 20px auto; /* Centraliza o conteúdo */
 }
+
+/* Ajustando a biografia dentro do grid */
+.biografia {
+    text-align: center;
+    font-family: helvetica, sans-serif;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 50px;
+    grid-column: span 2; /* Faz a biografia ocupar as duas colunas */
+}
+
+/* Ajustando a lista de hobbies com grid */
 .hobbies {
     background-color: rgba(255, 255, 255, 0.7);
     border: 25px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
-    padding: 0px;
+    padding: 20px;
     width: 700px;
-    text-align: center; /* Centraliza o texto dentro do bloco */
-    margin: 1px auto; /* Centraliza a seção e adiciona um espaço acima */
-}
-
-.imagem {
-    width: 110px;
-    height: auto;
-    border-radius: 10%;
-    border: 5px solid #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin: 10px auto;
-    display: block;
-}
-
-.cabeçalho {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide os hobbies em duas colunas */
+    gap: 20px;
     text-align: center;
-    font-family: helvetica, sans-serif;
-    font-size: 50px;
-    margin: 30px auto;
 }
 
-.biografia {
-    flex: 1; /* Permite que a biografia ocupe o espaço restante */
-    margin-right: 20px; /* Margem à direita para espaçamento */
-    text-align: center;
-    font-family: helvetica, sans-serif;
-    font-size: 20px;
-    margin: 20px 0; /* Margem acima e abaixo */
-    padding: 50px; /* Remove o preenchimento */
-}
-
-.biotext {
-    text-align: center;
+.hobbies .lista {
     font-family: Arial, sans-serif;
-    font-size: 13px;
-    margin: 10px;
-}
-
-.lista {
-    font-family: arial, sans-serif;
     font-size: 25px;
-    list-style-type: none; /* Remove os marcadores padrão */
-    padding: 0; /* Remove o preenchimento da lista */
+    list-style-type: none;
+    padding: 0;
 }
 
-.lista li {
-    margin-right: 10px; /* Espaçamento entre os itens da lista */
+.hobbies .lista li {
+    margin-right: 10px;
 }
 
-.lista li::before {
-    content: "• "; /* Adiciona um marcador manualmente */
-    color: black; /* Cor do marcador */
-    font-weight: bold; /* Deixa o marcador em negrito, se desejado */
+.hobbies .lista li::before {
+    content: "• "; 
+    color: black; 
+    font-weight: bold;
 }
 
+/* Grid no Contato */
 .contato {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 150px auto; /* Espaçamento maior para descer a seção */
+    margin: 150px auto;
     width: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: grid; /* Ativa o grid no formulário */
+    gap: 15px; /* Espaçamento entre os campos */
 }
 
-.contato h1 {
-    font-family: helvetica, sans-serif;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.contato label {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    display: block; /* Exibe o label como bloco para alinhar melhor os campos */
-    margin-bottom: 5px;
-}
-
+.contato label,
 .contato input[type="text"],
 .contato input[type="email"],
 .contato textarea {
-    width: 90%; /* Faz com que os inputs ocupem toda a largura disponível */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px; /* Espaçamento entre os campos */
-    font-size: 14px;
+    grid-column: span 2; /* Faz com que todos esses campos ocupem a largura completa */
 }
 
 .contato input[type="submit"] {
-    background-color: #4CAF50; /* Cor do botão */
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    grid-column: span 2; /* Faz o botão de envio ocupar toda a largura */
 }
 
-.contato input[type="submit"]:hover {
-    background-color: #45a049; /* Cor ao passar o mouse */
-}
-
-.rodape {
-    font-family: arial;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 10px solid rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    width: auto;
-    text-align: center; /* Centraliza o texto dentro do bloco */
-    margin: 0px auto; /* Centraliza a seção e adiciona um espaço acima */
-}
-
-body {
-    background-image: url('https://i.pinimg.com/originals/36/71/a7/3671a71c8ac7caf97d84b32ff9745d99.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* Ajustes para telas menores, como tablets */
+/* Manter a responsividade */
 @media (max-width: 768px) {
     .hobbies {
-        width: 80%; /* Aumenta a largura para ocupar 80% da tela */
-        padding: 15px; /* Aumenta o padding para melhorar a legibilidade */
+        width: 90%; /* Aumenta a largura da seção de hobbies */
     }
 
-    .biografia, .contato {
-        margin: 20px; /* Reduz a margem */
+    .container {
+        grid-template-columns: 1fr; /* Para telas pequenas, colocar as seções uma abaixo da outra */
     }
 }
 
-/* Ajustes para telas pequenas, como celulares */
 @media (max-width: 480px) {
-    .hobbies {
-        width: 90%; /* Aumenta ainda mais para ocupar quase toda a largura */
-        padding: 10px; /* Reduz o padding para telas menores */
-    }
-
     .imagem {
-        width: 80px; /* Reduz o tamanho da imagem */
+        width: 80px;
     }
 
     .cabeçalho {
-        font-size: 32px; /* Reduz o tamanho do cabeçalho */
+        font-size: 32px;
     }
 
     .biografia, .contato {
-        width: 90%; /* Ajusta a largura para se adaptar à tela menor */
-        margin: 10px auto; /* Centraliza com uma margem menor */
+        width: 90%;
+        margin: 10px auto;
     }
 
     .contato input[type="submit"] {
-        padding: 8px 16px; /* Reduz o tamanho do botão */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
+        padding: 8px 16px;
+        font-size: 14px;
     }
-}
-
-.menu {
-    text-align: center;
-    background-color: #333; /* Cor de fundo do menu */
-    padding: 10px 0; /* Espaçamento */
-}
-
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    display: inline; /* Exibe os itens na horizontal */
-    margin-right: 20px;
-}
-
-.menu a {
-    color: white; /* Cor dos links */
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.menu a:hover {
-    color: #45a049; /* Cor ao passar o mouse */
 }
