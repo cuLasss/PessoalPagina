@@ -1,3 +1,6 @@
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
 .container {
     display: flex; /* Ativa o flexbox */
     justify-content: space-between; /* Distribui o espaço entre os itens */
@@ -130,6 +133,7 @@
 }
 
 body {
+    top: 0px !important;
     background-image: url('https://i.pinimg.com/originals/36/71/a7/3671a71c8ac7caf97d84b32ff9745d99.jpg');
     background-repeat: no-repeat;
     background-size: cover;
