@@ -216,7 +216,7 @@ body {
     .col-t12 {width: 100%;}
 }
 
-/* Para dispositivos com largura maior que 1024px (computadores) */
+/* Para dispositivos com largura maior que 1024px (computador*/
 @media (min-width: 1025px) {
     .col-p1 {width: 8.33%;}
     .col-p2 {width: 16.66%;}
