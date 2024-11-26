@@ -201,7 +201,7 @@ body {
 }
 
 /* Para dispositivos de 768px a 1024px (tablets) */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .col-t1 {width: 8.33%;}
     .col-t2 {width: 16.66%;}
     .col-t3 {width: 25%;}
