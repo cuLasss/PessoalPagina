@@ -46,13 +46,13 @@
         <form action="mailto:lucas141martin@hotmail.com" method="POST" enctype="text/plain">
             
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
             
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
             
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" autocomplete="off" required></textarea>
             
             <input type="submit" value="Enviar">
         </form>
