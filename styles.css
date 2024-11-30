@@ -175,7 +175,7 @@
 }
 
 body {
-    background-image: url('https://i.imgur.com/rlwBK6p.jpeg);
+    background-image: url('https://i.imgur.com/rlwBK6p.jpeg');
     top: 0px !important;
     margin: 0; 
     background-size: cover; /* Faz a imagem cobrir toda a área */
