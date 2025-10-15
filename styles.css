@@ -95,47 +95,48 @@ body::after {
 
 .particle {
     position: absolute;
-    width: 2px;
-    height: 2px;
-    background: rgba(74, 158, 255, 0.4);
+    width: 4px;
+    height: 4px;
+    background: rgba(74, 158, 255, 0.8);
     border-radius: 50%;
     animation: floatUp 20s linear infinite;
+    box-shadow: 0 0 6px rgba(74, 158, 255, 0.6);
 }
 
 .particle:nth-child(1) {
     left: 10%;
     animation-delay: 0s;
-    animation-duration: 18s;
+    animation-duration: 12s;
 }
 
 .particle:nth-child(2) {
     left: 25%;
-    animation-delay: -3s;
-    animation-duration: 22s;
+    animation-delay: -2s;
+    animation-duration: 15s;
 }
 
 .particle:nth-child(3) {
     left: 40%;
-    animation-delay: -6s;
-    animation-duration: 20s;
+    animation-delay: -4s;
+    animation-duration: 13s;
 }
 
 .particle:nth-child(4) {
     left: 60%;
-    animation-delay: -9s;
-    animation-duration: 24s;
+    animation-delay: -6s;
+    animation-duration: 16s;
 }
 
 .particle:nth-child(5) {
     left: 75%;
-    animation-delay: -12s;
-    animation-duration: 19s;
+    animation-delay: -8s;
+    animation-duration: 14s;
 }
 
 .particle:nth-child(6) {
     left: 90%;
-    animation-delay: -15s;
-    animation-duration: 21s;
+    animation-delay: -10s;
+    animation-duration: 17s;
 }
 
 @keyframes floatUp {
