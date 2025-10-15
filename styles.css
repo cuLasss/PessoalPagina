@@ -26,7 +26,7 @@ body {
     position: relative;
 }
 
-/* Animações de Background Lendárias */
+/* Background simples e otimizado */
 body::before {
     content: '';
     position: fixed;
@@ -35,145 +35,12 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(74, 158, 255, 0.05) 0%, transparent 60%),
-        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.04) 0%, transparent 60%);
-    animation: backgroundBreath 20s ease-in-out infinite;
+        radial-gradient(circle at 20% 80%, rgba(74, 158, 255, 0.03) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.02) 0%, transparent 60%);
     pointer-events: none;
     z-index: -1;
 }
 
-body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(1px 1px at 20px 30px, rgba(74, 158, 255, 0.2), transparent),
-        radial-gradient(1px 1px at 40px 70px, rgba(0, 212, 255, 0.15), transparent),
-        radial-gradient(1px 1px at 90px 40px, rgba(74, 158, 255, 0.25), transparent);
-    background-repeat: repeat;
-    background-size: 150px 80px;
-    animation: particleFloat 30s linear infinite;
-    pointer-events: none;
-    z-index: -1;
-}
-
-@keyframes backgroundBreath {
-    0%, 100% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
-
-@keyframes particleFloat {
-    0% {
-        transform: translateY(0px) translateX(0px);
-    }
-    50% {
-        transform: translateY(-15px) translateX(10px);
-    }
-    100% {
-        transform: translateY(0px) translateX(0px);
-    }
-}
-
-/* Partículas Flutuantes Orgânicas */
-.floating-particles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: rgba(74, 158, 255, 0.3);
-    border-radius: 50%;
-    animation: floatParticle 15s linear infinite;
-}
-
-.particle:nth-child(1) {
-    left: 10%;
-    animation-delay: 0s;
-    animation-duration: 12s;
-}
-
-.particle:nth-child(2) {
-    left: 20%;
-    animation-delay: -2s;
-    animation-duration: 15s;
-}
-
-.particle:nth-child(3) {
-    left: 30%;
-    animation-delay: -4s;
-    animation-duration: 18s;
-}
-
-.particle:nth-child(4) {
-    left: 40%;
-    animation-delay: -6s;
-    animation-duration: 14s;
-}
-
-.particle:nth-child(5) {
-    left: 50%;
-    animation-delay: -8s;
-    animation-duration: 16s;
-}
-
-.particle:nth-child(6) {
-    left: 60%;
-    animation-delay: -10s;
-    animation-duration: 13s;
-}
-
-.particle:nth-child(7) {
-    left: 70%;
-    animation-delay: -1s;
-    animation-duration: 17s;
-}
-
-.particle:nth-child(8) {
-    left: 80%;
-    animation-delay: -3s;
-    animation-duration: 19s;
-}
-
-.particle:nth-child(9) {
-    left: 90%;
-    animation-delay: -5s;
-    animation-duration: 11s;
-}
-
-@keyframes floatParticle {
-    0% {
-        transform: translateY(100vh) translateX(0px) scale(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-        transform: translateY(90vh) translateX(10px) scale(1);
-    }
-    50% {
-        transform: translateY(50vh) translateX(-20px) scale(1.2);
-    }
-    90% {
-        opacity: 1;
-        transform: translateY(10vh) translateX(15px) scale(0.8);
-    }
-    100% {
-        transform: translateY(-10vh) translateX(0px) scale(0);
-        opacity: 0;
-    }
-}
 
 /* Header Styles */
 .header {
@@ -217,23 +84,6 @@ body::after {
     object-position: center;
 }
 
-.profile-image::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #4a9eff, #00d4ff, #4a9eff);
-    z-index: -1;
-    animation: rotate 3s linear infinite;
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 .profile-image:hover {
     transform: scale(1.05);
@@ -404,9 +254,9 @@ body::after {
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 20px 40px rgba(74, 158, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(74, 158, 255, 0.1);
     border-color: #4a9eff;
 }
 
@@ -471,8 +321,8 @@ body::after {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(74, 158, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(74, 158, 255, 0.1);
 }
 
 .project-icon {
