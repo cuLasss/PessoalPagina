@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+/* Performance optimizations */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -31,6 +42,7 @@ body::before {
     animation: backgroundBreath 12s ease-in-out infinite;
     pointer-events: none;
     z-index: -1;
+    will-change: opacity;
 }
 
 body::after {
@@ -51,6 +63,7 @@ body::after {
     animation: particleFloat 20s linear infinite;
     pointer-events: none;
     z-index: -1;
+    will-change: transform;
 }
 
 @keyframes backgroundBreath {
@@ -106,6 +119,7 @@ body::after {
     background: rgba(74, 158, 255, 0.4);
     border-radius: 50%;
     animation: floatParticle 12s linear infinite;
+    will-change: transform;
 }
 
 .particle:nth-child(1) {
@@ -218,12 +232,14 @@ body::after {
     box-shadow: 
         0 0 30px rgba(74, 158, 255, 0.4),
         0 20px 40px rgba(0, 0, 0, 0.5),
-        inset 0 0 20px rgba(74, 158, 255, 0.1);
+        inset 0 0 20px rgba(74, 158, 0.1);
     margin-bottom: 20px;
     transition: all 0.3s ease;
     position: relative;
     object-fit: cover;
     object-position: center;
+    content-visibility: auto;
+    contain-intrinsic-size: 150px 150px;
 }
 
 .profile-image::before {
@@ -1170,4 +1186,24 @@ html {
 
 body {
     animation: fadeIn 0.8s ease-in;
+}
+
+/* Performance optimizations */
+.project-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 350px 400px;
+}
+
+.skill-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 250px 200px;
+}
+
+/* Critical resource hints */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lucas Martin - Full-Stack & Mobile Developer</title>
+    <title>Lucas Martin - Full-Stack & Mobile Developer | Automação + IA</title>
+    <meta name="description" content="Desenvolvedor Full-Stack especializado em automação, IA e soluções tecnológicas para empresas. Portfólio com projetos premiados em Flutter, Python e desenvolvimento web.">
+    <meta name="keywords" content="desenvolvedor full-stack, automação, inteligência artificial, flutter, python, desenvolvimento web, mobile developer">
+    <meta name="author" content="Lucas Martin">
+    <meta property="og:title" content="Lucas Martin - Full-Stack & Mobile Developer">
+    <meta property="og:description" content="Desenvolvedor Full-Stack especializado em automação, IA e soluções tecnológicas para empresas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://culasss.github.io">
+    <meta property="og:image" content="https://culasss.github.io/imagens/perfil.jpeg">
+    <link rel="canonical" href="https://culasss.github.io">
     <link rel="icon" type="image/x-icon" href="/imagens/favicon.png">
+    <link rel="preload" href="imagens/perfil.jpeg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lucas Martin",
+        "jobTitle": "Full-Stack & Mobile Developer",
+        "description": "Desenvolvedor Full-Stack especializado em automação, IA e soluções tecnológicas para empresas",
+        "url": "https://culasss.github.io",
+        "image": "https://culasss.github.io/imagens/perfil.jpeg",
+        "email": "lucas141martin@hotmail.com",
+        "sameAs": [
+            "https://github.com/cuLasss",
+            "https://www.linkedin.com/in/lucas-m4rtin/"
+        ],
+        "knowsAbout": [
+            "Desenvolvimento Web",
+            "Desenvolvimento Mobile",
+            "Automação",
+            "Inteligência Artificial",
+            "Flutter",
+            "Python",
+            "JavaScript"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Desenvolvedor Full-Stack",
+            "description": "Especialista em desenvolvimento web e mobile com foco em automação e IA"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Animações de Background -->
@@ -25,7 +68,7 @@
     <!-- Header -->
     <header class="header">
         <div class="profile-section">
-            <img class="profile-image" src="imagens/perfil.jpeg?v=2" alt="Lucas Martin">
+            <img class="profile-image" src="imagens/perfil.jpeg?v=3" alt="Lucas Martin - Desenvolvedor Full-Stack" width="150" height="150" loading="eager" fetchpriority="high">
             <h1 class="main-title">Lucas Martin</h1>
             <p class="subtitle">Full-Stack & Mobile Developer</p>
             <p class="tagline">Automation + AI Integrations | Business Logistics</p>
@@ -33,18 +76,19 @@
     </header>
 
     <!-- Navigation Menu -->
-    <nav class="navigation">
+    <nav class="navigation" role="navigation" aria-label="Menu principal">
         <ul class="nav-list">
-            <li><a href="#sobre" class="nav-link">Sobre</a></li>
-            <li><a href="#projetos" class="nav-link">Projetos</a></li>
-            <li><a href="#contato" class="nav-link">Contato</a></li>
+            <li><a href="#sobre" class="nav-link" aria-label="Ir para seção Sobre">Sobre</a></li>
+            <li><a href="#projetos" class="nav-link" aria-label="Ir para seção Projetos">Projetos</a></li>
+            <li><a href="#contato" class="nav-link" aria-label="Ir para seção Contato">Contato</a></li>
         </ul>
     </nav>
 
     <!-- About Section -->
-    <section id="sobre" class="about-section">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+    <main>
+        <section id="sobre" class="about-section" aria-labelledby="sobre-title">
+            <div class="container">
+                <h2 id="sobre-title" class="section-title">Sobre Mim</h2>
             <div class="bio-content">
                 <p class="bio-text">
                     Olá! 👋 Sou Lucas, um Desenvolvedor Full Stack focado em performance digital, 
@@ -81,10 +125,10 @@
         </div>
     </section>
     
-    <!-- Projects Section -->
-    <section id="projetos" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Meus Projetos</h2>
+        <!-- Projects Section -->
+        <section id="projetos" class="projects-section" aria-labelledby="projetos-title">
+            <div class="container">
+                <h2 id="projetos-title" class="section-title">Meus Projetos</h2>
             <div class="projects-grid">
                 <!-- 1º - Dashboard Administrativo (Maior valor comercial) -->
                 <div class="project-card" data-category="web">
@@ -238,10 +282,10 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Vamos Conversar?</h2>
+        <!-- Contact Section -->
+        <section id="contato" class="contact-section" aria-labelledby="contato-title">
+            <div class="container">
+                <h2 id="contato-title" class="section-title">Vamos Conversar?</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Minha Missão</h3>
@@ -266,15 +310,15 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" action="https://formspree.io/f/xvgwdzgk" method="POST" id="contactForm">
+                <form class="contact-form" action="https://formspree.io/f/xvgwdzgk" method="POST" id="contactForm" role="form" aria-label="Formulário de contato">
                     <div class="form-group">
             <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required aria-describedby="nome-help">
                     </div>
             
                     <div class="form-group">
             <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-describedby="email-help">
                     </div>
                     
                     <div class="form-group">
@@ -311,8 +355,9 @@
                     <div id="formStatus" class="form-status"></div>
         </form>
     </div>
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -336,35 +381,6 @@
             });
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            observer.observe(card);
-        });
-
-        // Add hover effects to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
 
         // Phone number formatting
         const telefoneInput = document.getElementById('telefone');
