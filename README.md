@@ -1,4 +1,4 @@
-# 🔥​ Lucas - Página Pessoal
+# Lucas Martin - Página Pessoal
 
 Bem-vindo ao meu espaço no GitHub! 🚀  
 
