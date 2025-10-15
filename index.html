@@ -1,70 +1,655 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Site do Lucas</title>
-    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/e32IzQN.png">
+    <title>Lucas Martin - Full-Stack & Mobile Developer</title>
+    <link rel="icon" type="image/x-icon" href="/imagens/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-        <h1 class="cabeçalho col-c12 col-t12 col-p12"><i>Lucas Martin</i></h1>
-        <img class="imagem col-c4 col-t2 col-p1" src="https://i.imgur.com/BGTHrcB.png" alt="homem de touca">
+    <!-- Animações de Background -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="profile-section">
+            <img class="profile-image" src="imagens/perfil.jpeg?v=2" alt="Lucas Martin">
+            <h1 class="main-title">Lucas Martin</h1>
+            <p class="subtitle">Full-Stack & Mobile Developer</p>
+            <p class="tagline">Automation + AI Integrations | Business Logistics</p>
+        </div>
+    </header>
 
-    <!-- Menu de Navegação -->
-    <nav class="menu col-c12 col-t8 col-p6">
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#contato">Contato</a></li>
+    <!-- Navigation Menu -->
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
     </nav>
 
-    <section id="sobre" class="col-c12 col-t12 col-p12">
-        <div class="container col-c12 col-t12 col-p12">
-            <div class="biografia col-c12 col-t12 col-p12">
-                <h1><i>BIOGRAFIA</i></h1>
-                <div class="biotext">
-                    <h2>Sou um programador iniciante e esta é a minha página inicial. <br>Estou Aprendendo HTML e tenho determinação para o sucesso. <br>
-                    Também sei fazer conta de 1+1 e multiplicação de 2x2</h2>
+    <!-- About Section -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="bio-content">
+                <p class="bio-text">
+                    Olá! 👋 Sou Lucas, um Desenvolvedor Full Stack focado em performance digital, 
+                    automação e IA aplicada aos negócios.
+                </p>
+                <p class="bio-text">
+                    Ajudo empresas a aumentar conversões e reduzir custos operacionais através 
+                    de soluções tecnológicas inteligentes.
+                </p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Design de alta performance e UX/UI</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Automação</h3>
+                        <p>Integrações robustas e eficientes</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Inteligência Artificial</h3>
+                        <p>IA aplicada a leads, dados e atendimento</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Backend Escalável</h3>
+                        <p>APIs e webhooks para crescimento</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <div id="hobbies" class="hobbies col-c10 col-t8 col-p5">    
-        <h1 style="font-family: helvetica, sans-serif;"><i>HOBBIES</i></h1>
-        <ul class="lista"> 
-            <li>Gosto de ver filmes como shrek 2</li>
-            <li>Gosto de dormir</li>
-            <li>Gosto de jogar jogos eletrônicos</li>
-        </ul>
+    <!-- Projects Section -->
+    <section id="projetos" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-grid">
+                <!-- 1º - Dashboard Administrativo (Maior valor comercial) -->
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="project-title">Dashboard Administrativo</h3>
+                    <p class="project-description">
+                        Sistema completo para loja de roupas íntimas: gestão de vendas, 
+                        emissão de notas fiscais, controle financeiro e WhatsApp.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Full-Stack</span>
+                        <span class="tech-tag">API NFe</span>
+                        <span class="tech-tag">WhatsApp API</span>
+                    </div>
+                </div>
+
+                <!-- 2º - App Dieta Ideal para Cabras (1º lugar FECIB) -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="project-title">App Dieta Ideal para Cabras</h3>
+                    <p class="project-description">
+                        App Android para calcular dieta ideal de cabras leiteiras. 
+                        <strong>1º lugar na FECIB - IFMG Campus Barbacena</strong>
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Android</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.ifsudestemg.edu.br/noticias/barbacena/ix-fecib-movimenta-if-sudeste-mg-campus-barbacena" target="_blank" class="project-link">
+                            <i class="fas fa-trophy"></i>
+                            Ver Premiação FECIB
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3º - Sistema de Ticket Virtual (1º lugar Hackathon) -->
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3 class="project-title">Sistema de Ticket Virtual</h3>
+                    <p class="project-description">
+                        Solução para gerenciamento de tickets de refeitório do IFMG. 
+                        <strong>1º lugar no Hackathon</strong> - Sistema online com fallback offline.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Web App</span>
+                        <span class="tech-tag">Offline First</span>
+                        <span class="tech-tag">Hackathon</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.ifsudestemg.edu.br/noticias/barbacena/campus-barbacena-realiza-1o-hackathon-do-coworking-ifbq" target="_blank" class="project-link">
+                            <i class="fas fa-trophy"></i>
+                            Ver Premiação Hackathon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4º - Minei App (Alto potencial comercial) -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="project-title">Minei - App de Compras</h3>
+                    <p class="project-description">
+                        App mobile para calcular preços, cashback e otimizar rotas de compras. 
+                        Parcerias com mercados locais e sistema de cashback.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">OCR</span>
+                        <span class="tech-tag">Cashback</span>
+                        <span class="tech-tag">Em Andamento</span>
+                    </div>
+                </div>
+
+                <!-- 5º - Sistema para Academia (Valor comercial) -->
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="project-title">Sistema para Academia</h3>
+                    <p class="project-description">
+                        Gestão completa de academia: acompanhamento de exercícios, 
+                        pagamentos, treinos em casa e atendimento WhatsApp.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Full-Stack</span>
+                        <span class="tech-tag">Payment API</span>
+                        <span class="tech-tag">Em Andamento</span>
+                    </div>
+                </div>
+
+                <!-- 6º - PSO Forms (Automação empresarial) -->
+                <div class="project-card" data-category="automation">
+                    <div class="project-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3 class="project-title">PSO Forms com AppScript</h3>
+                    <p class="project-description">
+                        Automação de planilhas operacionais com Google Forms e AppScript, 
+                        gerenciando 10+ filiais automaticamente.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Google Apps Script</span>
+                        <span class="tech-tag">Google Forms</span>
+                        <span class="tech-tag">Automação</span>
+                    </div>
+                </div>
+
+                <!-- 7º - Ferramenta de Mensagens (Automação) -->
+                <div class="project-card" data-category="automation">
+                    <div class="project-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="project-title">Ferramenta de Mensagens Automatizadas</h3>
+                    <p class="project-description">
+                        Automação completa de envio de mensagens usando Selenium, 
+                        reduzindo drasticamente o tempo de telemarketing.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Automação</span>
+                    </div>
     </div>
     
-    <div id="contato" class="contato col-c8 col-t5 col-p4">
-        <h1>Seção de Contato</h1>
-        <form action="https://formspree.io/f/{your_form_id}" method="POST">
-            
+                <!-- 8º - Show do Lucão (Projeto pessoal) -->
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="project-title">Show do Lucão</h3>
+                    <p class="project-description">
+                        Jogo interativo estilo "Show do Milhão" com APIs de perguntas 
+                        e tradução, sistema de pontuação virtual.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Web</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Vamos Conversar?</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Minha Missão</h3>
+                    <p>
+                        Transformar dados em crescimento real, combinando marketing e tecnologia 
+                        para entregar resultados mensuráveis. 🚀
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:lucas141martin@hotmail.com" class="contact-link" id="emailLink" title="Clique para copiar o e-mail">
+                            <i class="fas fa-envelope"></i>
+                            <span class="email-text">lucas141martin@hotmail.com</span>
+                            <span class="copy-confirmation">Copiado!</span>
+                        </a>
+                        <a href="https://github.com/cuLasss" class="contact-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucas-m4rtin/" class="contact-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="https://formspree.io/f/xvgwdzgk" method="POST" id="contactForm">
+                    <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
             
+                    <div class="form-group">
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
-            
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">
+                            <i class="fas fa-phone"></i>
+                            Telefone:
+                        </label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="+99 (99) 9 9999-9999" maxlength="20">
+                        <div id="countryIndicator" class="country-indicator"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione o assunto</option>
+                            <option value="projeto-web">Projeto Web</option>
+                            <option value="app-mobile">App Mobile</option>
+                            <option value="automatizacao">Automação</option>
+                            <option value="consultoria">Consultoria</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" autocomplete="off" required></textarea>
-            
-            <input type="submit" value="Enviar">
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-me sobre seu projeto, orçamento, prazo..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Enviar Mensagem</span>
+                    </button>
+                    
+                    <div id="formStatus" class="form-status"></div>
         </form>
     </div>
+        </div>
+    </section>
 
-    <footer  class="col-c12 col-t12 col-p12">
-        <div class="rodape">
-            <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ" target="_blank" class="link-personalizado"> Meu site favorito </a>
-            <h5> E-mail: lucas141martin@hotmail.com </h5>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lucas Martin. Desenvolvido com ❤️ e muito café ☕</p>
         </div>
     </footer>
 
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Add hover effects to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Phone number formatting
+        const telefoneInput = document.getElementById('telefone');
+        
+        // Códigos de país e seus formatos
+        const countryFormats = {
+            '55': { name: 'Brasil', format: 'XX (XX) X XXXX-XXXX', areaLength: 2, phoneLength: 9 },
+            '1': { name: 'EUA/Canadá', format: 'X (XXX) XXX-XXXX', areaLength: 3, phoneLength: 7 },
+            '44': { name: 'Reino Unido', format: 'XX XXXX XXXXXX', areaLength: 0, phoneLength: 10 },
+            '33': { name: 'França', format: 'XX X XX XX XX XX', areaLength: 0, phoneLength: 9 },
+            '49': { name: 'Alemanha', format: 'XX XXX XXXXXXX', areaLength: 0, phoneLength: 10 },
+            '39': { name: 'Itália', format: 'XX XXX XXX XXXX', areaLength: 0, phoneLength: 9 },
+            '34': { name: 'Espanha', format: 'XX XXX XX XX XX', areaLength: 0, phoneLength: 9 },
+            '351': { name: 'Portugal', format: 'XXX XX XXX XXXX', areaLength: 0, phoneLength: 9 },
+            '54': { name: 'Argentina', format: 'XX (XXX) XXX-XXXX', areaLength: 3, phoneLength: 8 },
+            '52': { name: 'México', format: 'XX (XXX) XXX-XXXX', areaLength: 3, phoneLength: 8 },
+            '56': { name: 'Chile', format: 'XX X XXXX XXXX', areaLength: 0, phoneLength: 8 },
+            '57': { name: 'Colômbia', format: 'XX (XXX) XXX-XXXX', areaLength: 3, phoneLength: 7 },
+            '51': { name: 'Peru', format: 'XX (XXX) XXX-XXX', areaLength: 3, phoneLength: 7 },
+            '86': { name: 'China', format: 'XX XXX XXXX XXXX', areaLength: 0, phoneLength: 11 },
+            '81': { name: 'Japão', format: 'XX XX-XXXX-XXXX', areaLength: 0, phoneLength: 10 },
+            '82': { name: 'Coreia do Sul', format: 'XX XX-XXXX-XXXX', areaLength: 0, phoneLength: 10 },
+            '91': { name: 'Índia', format: 'XX XXXX-XXXXXX', areaLength: 0, phoneLength: 10 },
+            '61': { name: 'Austrália', format: 'XX X XXXX XXXX', areaLength: 0, phoneLength: 9 },
+            '27': { name: 'África do Sul', format: 'XX XX XXX XXXX', areaLength: 0, phoneLength: 9 }
+        };
+        
+        function detectCountryCode(numbers) {
+            // Verifica códigos de 3 dígitos primeiro
+            if (numbers.length >= 3) {
+                const code3 = numbers.substring(0, 3);
+                if (countryFormats[code3]) {
+                    return { code: code3, format: countryFormats[code3] };
+                }
+            }
+            
+            // Verifica códigos de 2 dígitos
+            if (numbers.length >= 2) {
+                const code2 = numbers.substring(0, 2);
+                if (countryFormats[code2]) {
+                    return { code: code2, format: countryFormats[code2] };
+                }
+            }
+            
+            // Verifica códigos de 1 dígito
+            if (numbers.length >= 1) {
+                const code1 = numbers.substring(0, 1);
+                if (countryFormats[code1]) {
+                    return { code: code1, format: countryFormats[code1] };
+                }
+            }
+            
+            return null;
+        }
+        
+        function formatPhoneNumber(value) {
+            // Remove todos os caracteres não numéricos
+            let numbers = value.replace(/\D/g, '');
+            
+            // Se não começar com +, adiciona
+            if (value.length > 0 && !value.startsWith('+')) {
+                return '+' + numbers;
+            }
+            
+            // Se começar com +, processa normalmente
+            if (value.startsWith('+')) {
+                // Limita a 15 dígitos (padrão internacional)
+                if (numbers.length > 15) {
+                    numbers = numbers.substring(0, 15);
+                }
+                
+                if (numbers.length === 0) {
+                    return '+';
+                }
+                
+                // Detecta o código do país
+                const country = detectCountryCode(numbers);
+                
+                if (!country) {
+                    // Se não reconhecer o país, formata genericamente
+                    if (numbers.length <= 2) {
+                        return `+${numbers}`;
+                    } else if (numbers.length <= 4) {
+                        return `+${numbers.substring(0, 2)} (${numbers.substring(2)}`;
+                    } else if (numbers.length <= 7) {
+                        return `+${numbers.substring(0, 2)} (${numbers.substring(2, 4)}) ${numbers.substring(4)}`;
+                    } else {
+                        return `+${numbers.substring(0, 2)} (${numbers.substring(2, 4)}) ${numbers.substring(4, 8)}-${numbers.substring(8)}`;
+                    }
+                }
+                
+                // Formata baseado no país detectado
+                const countryCode = country.code;
+                const format = country.format;
+                const areaLength = country.format.areaLength;
+                const phoneLength = country.format.phoneLength;
+                
+                const phoneNumbers = numbers.substring(countryCode.length);
+                
+                // Formatação específica para cada país
+                if (countryCode === '55') { // Brasil
+                    if (phoneNumbers.length <= 2) {
+                        return `+${countryCode} (${phoneNumbers}`;
+                    } else if (phoneNumbers.length <= 6) {
+                        return `+${countryCode} (${phoneNumbers.substring(0, 2)}) ${phoneNumbers.substring(2)}`;
+                    } else if (phoneNumbers.length <= 10) {
+                        return `+${countryCode} (${phoneNumbers.substring(0, 2)}) ${phoneNumbers.substring(2, 6)}-${phoneNumbers.substring(6)}`;
+                    } else {
+                        return `+${countryCode} (${phoneNumbers.substring(0, 2)}) ${phoneNumbers.substring(2, 3)} ${phoneNumbers.substring(3, 7)}-${phoneNumbers.substring(7)}`;
+                    }
+                } else if (countryCode === '1') { // EUA/Canadá
+                    if (phoneNumbers.length <= 3) {
+                        return `+${countryCode} (${phoneNumbers}`;
+                    } else if (phoneNumbers.length <= 6) {
+                        return `+${countryCode} (${phoneNumbers.substring(0, 3)}) ${phoneNumbers.substring(3)}`;
+                    } else {
+                        return `+${countryCode} (${phoneNumbers.substring(0, 3)}) ${phoneNumbers.substring(3, 6)}-${phoneNumbers.substring(6)}`;
+                    }
+                } else if (countryCode === '351') { // Portugal
+                    if (phoneNumbers.length <= 2) {
+                        return `+${countryCode} ${phoneNumbers}`;
+                    } else if (phoneNumbers.length <= 5) {
+                        return `+${countryCode} ${phoneNumbers.substring(0, 2)} ${phoneNumbers.substring(2)}`;
+                    } else if (phoneNumbers.length <= 8) {
+                        return `+${countryCode} ${phoneNumbers.substring(0, 2)} ${phoneNumbers.substring(2, 5)} ${phoneNumbers.substring(5)}`;
+                    } else {
+                        return `+${countryCode} ${phoneNumbers.substring(0, 2)} ${phoneNumbers.substring(2, 5)} ${phoneNumbers.substring(5, 8)} ${phoneNumbers.substring(8)}`;
+                    }
+                } else {
+                    // Formatação genérica para outros países
+                    if (phoneNumbers.length <= 3) {
+                        return `+${countryCode} ${phoneNumbers}`;
+                    } else if (phoneNumbers.length <= 6) {
+                        return `+${countryCode} ${phoneNumbers.substring(0, 3)} ${phoneNumbers.substring(3)}`;
+                    } else if (phoneNumbers.length <= 9) {
+                        return `+${countryCode} ${phoneNumbers.substring(0, 3)} ${phoneNumbers.substring(3, 6)} ${phoneNumbers.substring(6)}`;
+                    } else {
+                        return `+${countryCode} ${phoneNumbers.substring(0, 3)} ${phoneNumbers.substring(3, 6)} ${phoneNumbers.substring(6, 9)} ${phoneNumbers.substring(9)}`;
+                    }
+                }
+            }
+            
+            return numbers;
+        }
+        
+        telefoneInput.addEventListener('input', function(e) {
+            const cursorPosition = e.target.selectionStart;
+            const oldValue = e.target.value;
+            const newValue = formatPhoneNumber(e.target.value);
+            
+            e.target.value = newValue;
+            
+            // Ajusta a posição do cursor
+            const lengthDiff = newValue.length - oldValue.length;
+            e.target.setSelectionRange(cursorPosition + lengthDiff, cursorPosition + lengthDiff);
+            
+            // Mostra o indicador de país
+            const numbers = newValue.replace(/\D/g, '');
+            const country = detectCountryCode(numbers);
+            const countryIndicator = document.getElementById('countryIndicator');
+            
+            if (country && numbers.length >= country.code.length + 2) {
+                countryIndicator.textContent = `🌍 ${country.format.name}`;
+                countryIndicator.classList.add('show');
+            } else {
+                countryIndicator.classList.remove('show');
+            }
+        });
+        
+        telefoneInput.addEventListener('keydown', function(e) {
+            // Permite apenas números, backspace, delete, tab, escape, enter
+            if ([8, 9, 27, 13, 46].indexOf(e.keyCode) !== -1 ||
+                // Permite Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+                (e.keyCode === 65 && e.ctrlKey === true) ||
+                (e.keyCode === 67 && e.ctrlKey === true) ||
+                (e.keyCode === 86 && e.ctrlKey === true) ||
+                (e.keyCode === 88 && e.ctrlKey === true) ||
+                // Permite home, end, left, right
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                return;
+            }
+            // Garante que é um número
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+        
+        // Validação do telefone
+        telefoneInput.addEventListener('blur', function(e) {
+            const value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0 && value.length < 8) {
+                e.target.style.borderColor = '#f44336';
+                e.target.title = 'Telefone deve ter pelo menos 8 dígitos';
+            } else {
+                e.target.style.borderColor = 'rgba(74, 158, 255, 0.3)';
+                e.target.title = '';
+            }
+        });
+
+        // Email copy functionality
+        const emailLink = document.getElementById('emailLink');
+        const emailText = 'lucas141martin@hotmail.com';
+
+        emailLink.addEventListener('click', async function(e) {
+            e.preventDefault();
+            
+            try {
+                // Copy to clipboard
+                await navigator.clipboard.writeText(emailText);
+                
+                // Show confirmation
+                emailLink.classList.add('copied');
+                
+                // Change icon temporarily
+                const icon = emailLink.querySelector('i');
+                const originalClass = icon.className;
+                icon.className = 'fas fa-check';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    emailLink.classList.remove('copied');
+                    icon.className = originalClass;
+                }, 2000);
+                
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = emailText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                // Show confirmation even with fallback
+                emailLink.classList.add('copied');
+                const icon = emailLink.querySelector('i');
+                const originalClass = icon.className;
+                icon.className = 'fas fa-check';
+                
+                setTimeout(() => {
+                    emailLink.classList.remove('copied');
+                    icon.className = originalClass;
+                }, 2000);
+            }
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Enviando...</span>';
+            formStatus.className = 'form-status loading';
+            formStatus.textContent = 'Enviando sua mensagem...';
+            
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Erro ao enviar mensagem');
+                }
+            } catch (error) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = '❌ Erro ao enviar mensagem. Tente novamente ou envie um e-mail direto.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Enviar Mensagem</span>';
+            }
+        });
+    </script>
 </body>
 </html>
